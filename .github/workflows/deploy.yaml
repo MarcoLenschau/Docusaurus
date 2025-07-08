@@ -1,8 +1,13 @@
 name: Deploy to SSH Server
 
 on:
-  workflow_call:
-
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      
 jobs:
   build:
     name: Build Docusaurus
